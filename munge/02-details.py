@@ -24,7 +24,8 @@ def main():
     column_names = [s.lower() for s in column_names]
     data.columns = column_names
 
-    # Clean up data.frame
+    # Impute missing values
+    data = data.fillna(method='pad')
 
     # Write out data
     data.to_csv('../data/prepped/details.csv', index=False)
