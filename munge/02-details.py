@@ -25,7 +25,8 @@ def main():
     data.columns = column_names
 
     # Impute missing values
-    data = data.fillna(method='pad')
+    data.loc[11:14, 'group'] = 'Young-Middle'
+    data.loc[34:38, 'group'] = 'Middle-Old'
 
     # Write out data
     data.to_csv('../data/prepped/details.csv', index=False)
