@@ -15,7 +15,6 @@ def main():
     # Load data
     print("Started!")
     data_dir = os.path.abspath('../data/original')
-    data_dir = os.path.abspath('./data/original')
     zipfile_name = 'gait-maturation-db.tar.gz'
     file = os.path.join(data_dir, zipfile_name)
     data = pd.DataFrame()
@@ -40,7 +39,6 @@ def main():
 
     # Write out data
     data.to_csv('../data/prepped/intervals.csv', index=False)
-    data.to_csv('./data/prepped/intervals.csv', index=False)
     print("Finished!")
 
 
