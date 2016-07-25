@@ -27,6 +27,7 @@ library(scales)
 
 ```{r label="load-data"}
 intervals <- read.csv("../data/prepped/intervals.csv", stringsAsFactors = FALSE)
+details <- read.csv("../data/prepped/summary.csv", stringsAsFactors = FALSE)
 ```
 
 ```{r label="clean-data"}
