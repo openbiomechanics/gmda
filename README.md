@@ -2,7 +2,13 @@
 
 For more information on the challenge, look [here](https://physionet.org/physiobank/database/gait-maturation-db/).
 
-To activate environment, enter following into shell:
+To create a Conda environment, please enter the following into a shell:
+
+```shell
+ conda create --name gmdba --file requirements.txt
+```
+
+To activate the newly created Conda environment, please enter the following into a shell:
 
 ```shell
 source activate gmdba
