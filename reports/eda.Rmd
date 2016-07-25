@@ -1,0 +1,50 @@
+---
+title: "Exploratory Data Analysis"
+author: "Paul Hendricks"
+date: "`r Sys.Date()`"
+output:
+  md_document:
+    variant: markdown_github
+---
+
+# Exploratory Data Analysis
+
+```{r label="settings", echo=FALSE, results='hide'}
+library(knitr)
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", 
+                      fig.path = "imgs/eda-", 
+                      echo = FALSE, message = FALSE, 
+                      warning = FALSE, error = FALSE)
+knitr::opts_chunk$set(fig.width = 8, fig.height = 8)
+options(scipen = 999)
+```
+
+```{r label="load-libraries", results='hide'}
+library(dplyr)
+library(ggplot2)
+library(scales)
+```
+
+```{r label="load-data"}
+intervals <- read.csv("../data/prepped/intervals.csv", stringsAsFactors = FALSE)
+```
+
+```{r label="clean-data"}
+
+```
+
+## Visualization
+
+```{r}
+ggplot(intervals, aes(x = stride_interval)) + 
+  geom_histogram()
+
+# todo check acf to ensure that stride_interval's aren't autocorrelated
+```
+
+
+### Session Info
+
+```{r}
+sessionInfo()
+```
