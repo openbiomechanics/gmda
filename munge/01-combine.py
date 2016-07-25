@@ -34,6 +34,7 @@ def main():
                 df['subject_id'] = int(x.groups()[0])
                 data = pd.concat([data, df], axis=0)
 
+    # Clean up data.frame
     data = data[['subject_id'] + column_names]
     data = data.sort_values(['subject_id', 'time'])
 
